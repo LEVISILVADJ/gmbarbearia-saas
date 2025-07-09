@@ -1,0 +1,52 @@
+{
+  "name": "GM Barbearia",
+  "short_name": "GM Barbearia",
+  "description": "Sistema completo de gerenciamento para barbearias",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#11110f",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/WhatsApp Image 2025-06-26 at 08.22.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/WhatsApp Image 2025-06-26 at 08.22.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Agendar",
+      "short_name": "Agendar",
+      "description": "Agendar um novo horário",
+      "url": "/agendar",
+      "icons": [
+        {
+          "src": "/WhatsApp Image 2025-06-26 at 08.22.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Contato",
+      "short_name": "Contato",
+      "description": "Entre em contato conosco",
+      "url": "/contato",
+      "icons": [
+        {
+          "src": "/WhatsApp Image 2025-06-26 at 08.22.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
