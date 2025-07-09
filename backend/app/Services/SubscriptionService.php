@@ -192,6 +192,30 @@ class SubscriptionService
     }
 
     /**
+     * Marcar assinatura como vencida
+     */
+    public function markAsPastDue(Subscription $subscription): void
+    {
+        // Atualizar assinatura
+        $subscription->update([
+            'status' => 'past_due',
+        ]);
+        
+        // Atualizar tenant
+        $tenant = $subscription->tenant;
+        $tenant->update([
+            'subscription_status' => 'past_due',
+        ]);
+        
+        // Se o período de teste já expirou, desativar o tenant
+        if ($tenant->hasExpiredTrial()) {
+            $tenant->update([
+                'status' => 'inactive',
+            ]);
+        }
+    }
+
+    /**
      * Cancelar assinatura
      */
     public function cancelSubscription(Subscription $subscription, string $reason = 'user_requested'): void
